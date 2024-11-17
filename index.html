@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <h1>Support Our Cause</h1>
+            <img src="Downloads/Screenshot (38).png" alt="logo.png" class="header image">
+            <div class="donation-form">
+                <h2>Make a Donation</h2>
+                <form id="donation-form">
+            <h3>Help make a difference with your donation</h3>
+        </header>
+        <form id="donation-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            
+        <fieldset>
+            <legend>Choose Donation Type:</legend>
+            <label for="money">
+                <input type="checkbox" id="money" name="donation-type" value="money">
+                Money Donation
+            </label><br>
+    
+            <label for="blood">
+                <input type="checkbox" id="blood" name="donation-type" value="blood">
+                Blood Donation
+            </label><br>
+    
+            <label for="organs">
+                <input type="checkbox" id="organs" name="donation-type" value="organs">
+                Organ Donation</label>
+                </fieldset>
+                <br>
+                <b
+                <div id="money-donation">
+                    <label for="amount">Donation Amount</label>
+                    <select id="amount" name="amount">
+                        <option value="10">$10</option>
+                        <option value="25">$25</option>
+                        <option value="50">$50</option>
+                        <option value="100">$100</option>
+                        <option value="other">Other</option>
+                        </select>
+                        <div id="blood-donation" style="display:type;">
+                            <label for="blood-type">Blood Type</label>
+                            <select id="blood-type" name="blood-type">
+                                <option value="A+">A+</option>
+                                <option value="B+">B+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O+">O+</option>
+                                <option value="A-">A-</option>
+                                <option value="B-">B-</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O-">O-</option>
+                            </select>
+                            <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location for blood donation">
+                </div>
+                <div id="organ-donation" style="display:type;">
+                    <label for="organ-type">Type of Organ</label>
+                    <select id="organ-type" name="organ-type">
+                        <option value="kidney">Kidney</option>
+                        <option value="liver">Liver</option>
+                        <option value="heart">Heart</option>
+                        <option value="lung">Lung</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="organ-condition">Condition of Organ</label>
+                    <select id="organ-condition" name="organ-condition">
+                        <option value="healthy">Healthy</option>
+                        <option value="partially-healthy">Partially Healthy</option>
+                        <option value="feel not well">Not well</option>
+                    </select>
+                </div>
+
+        <br>
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" min="1" placeholder="Enter amount" required>
+                <div>
+                    <label for="payment-method">Choose Payment Method:</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Bank Transfer</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+                </div>
+                <button type="submit">Donate Now</button>
+            </form>
+        </div>
+
+        <div id="thank-you-message" class="hidden">
+            <h3>Thank you for your donation!</h3>
+            <p>Your support helps us make a difference.</p>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+    <!-- Contact Form Section -->
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out to us.</p>
+    <img src="Downloads/Screenshot (39).png" alt="Screenshot of the Website" class="contact-image">
+        
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Success/Failure Message -->
+    <div id="form-message" class="hidden">
+        <p id="form-response"></p>
+    </div>
+</div>
+
+</body>
+</html>
